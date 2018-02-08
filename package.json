@@ -1,7 +1,7 @@
 {
-  "name": "node-template-18",
-  "version": "1.0.7",
-  "description": "Template for creating an npm package in 2018",
+  "name": "bible-api",
+  "version": "1.0.1",
+  "description": "Bible API that relies on the Digital Bible Toolkit at www.digitalbibleplatform.com",
   "author": "danday74",
   "license": "ISC",
   "main": "index.js",
@@ -12,6 +12,7 @@
     "prepush": "npm test"
   },
   "dependencies": {
+    "chapter-and-verse": "^1.0.6",
     "lodash": "^4.17.5"
   },
   "devDependencies": {
@@ -26,11 +27,11 @@
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danday74/node-template-18.git"
+    "url": "git+https://github.com/danday74/bible-api.git"
   },
   "bugs": {
-    "url": "https://github.com/danday74/node-template-18/issues"
+    "url": "https://github.com/danday74/bible-api/issues"
   },
-  "homepage": "https://github.com/danday74/node-template-18#readme",
+  "homepage": "https://github.com/danday74/bible-api#readme",
   "comment": "coveralls@2.11.16"
 }
