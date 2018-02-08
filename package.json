@@ -1,6 +1,6 @@
 {
   "name": "bible-api",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Bible API that relies on the Digital Bible Toolkit at www.digitalbibleplatform.com",
   "author": "danday74",
   "license": "ISC",
