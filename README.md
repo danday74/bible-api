@@ -7,3 +7,4 @@
 [![downloads](https://img.shields.io/npm/dm/bible-api.svg)](https://www.npmjs.com/package/bible-api)
 
 **Bible API that relies on the Digital Bible Toolkit at www.digitalbibleplatform.com**
+
