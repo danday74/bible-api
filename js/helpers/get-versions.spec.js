@@ -4,6 +4,7 @@ const sinon = require('sinon')
 
 const config = require('../../config')
 const getVersions = require('./get-versions')
+const v = require('../../mock-versions')
 
 describe('getVersions', () => {
 
@@ -12,7 +13,7 @@ describe('getVersions', () => {
   beforeEach(() => {
     sandbox = sinon.sandbox.create()
     sandbox.stub(config, 'getMaxConcurrentVersions').returns(3)
-    sandbox.stub(config, 'getSupportedVersions').returns({AAA: 'AAA', BBB: 'BBB', CCC: 'CCC', DDDD: 'DDD', EEE: 'EEE'})
+    sandbox.stub(config, 'getSupportedVersions').returns(v)
   })
 
   afterEach(() => {
@@ -21,51 +22,51 @@ describe('getVersions', () => {
 
   it('returns the first supported version where no args are given', () => {
     versions = getVersions()
-    expect(versions).to.eql([{AAA: 'AAA'}])
+    expect(versions).to.eql([v[0]])
   })
 
   it('returns the first X supported versions where core versions are requested', () => {
     versions = getVersions('core')
-    expect(versions).to.eql([{AAA: 'AAA'}, {BBB: 'BBB'}, {CCC: 'CCC'}])
+    expect(versions).to.eql([v[0], v[1], v[2]])
   })
 
   it('accepts versions as a string', () => {
     versions = getVersions('DDDD')
-    expect(versions).to.eql([{DDDD: 'DDD'}])
+    expect(versions).to.eql([v[3]])
   })
 
   it('accepts versions as a string array', () => {
     versions = getVersions(['DDDD'])
-    expect(versions).to.eql([{DDDD: 'DDD'}])
+    expect(versions).to.eql([v[3]])
   })
 
   it('accepts versions as an object array', () => {
-    versions = getVersions([{DDDD: 'DDD'}])
-    expect(versions).to.eql([{DDDD: 'DDD'}])
+    versions = getVersions([v[3]])
+    expect(versions).to.eql([v[3]])
   })
 
   it('falls back to default versions', () => {
     versions = getVersions([], ['BBB']) // string array
-    expect(versions).to.eql([{BBB: 'BBB'}])
+    expect(versions).to.eql([v[1]])
 
-    versions = getVersions([], [{EEE: 'EEE'}]) // object array
-    expect(versions).to.eql([{EEE: 'EEE'}])
+    versions = getVersions([], [v[4]]) // object array
+    expect(versions).to.eql([v[4]])
   })
 
   it('filters out unsupported versions from versions and preserves order', () => {
     versions = getVersions(['BBB', 'DDD', 'AAA']) // string array
-    expect(versions).to.eql([{BBB: 'BBB'}, {AAA: 'AAA'}])
+    expect(versions).to.eql([v[1], v[0]])
 
-    versions = getVersions([{BBB: 'BBB'}, {DDDD: 'DDDD'}, {AAA: 'AAA'}]) // object array
-    expect(versions).to.eql([{BBB: 'BBB'}, {AAA: 'AAA'}])
+    versions = getVersions([v[1], {abbr: 'DDDD', code: 'XD'}, v[0]]) // object array
+    expect(versions).to.eql([v[1], v[0]])
   })
 
   it('filters out unsupported versions from default versions and preserves order', () => {
-    versions = getVersions([], ['BBB', 'QQQ', 'AAA']) // string array
-    expect(versions).to.eql([{BBB: 'BBB'}, {AAA: 'AAA'}])
+    versions = getVersions([], ['DDDD', 'QQQ', 'AAA']) // string array
+    expect(versions).to.eql([v[3], v[0]])
 
-    versions = getVersions([], [{BBB: 'BBB'}, {QQQ: 'QQQ'}, {AAA: 'AAA'}]) // object array
-    expect(versions).to.eql([{BBB: 'BBB'}, {AAA: 'AAA'}])
+    versions = getVersions([], [v[3], {abbr: 'QQQ', code: 'XQX'}, v[0]]) // object array
+    expect(versions).to.eql([v[3], v[0]])
   })
 
   it('throws where versions is neither a string nor string array nor object array', () => {

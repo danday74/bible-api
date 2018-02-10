@@ -15,10 +15,9 @@ const urlVerseBuilder = (apiKey, versions, ref) => {
   if (cv == null) return null
   const book = cv.book
 
-  return _.map(versions, v => {
+  return _.map(versions, version => {
 
-    const version = _.values(v)[0]
-    const damId = 'ENG' + version + book.testament + '2ET'
+    const damId = 'ENG' + version.code + book.testament + '2ET'
 
     const urlVerseObj = _.cloneDeep(config.urlVerseObj)
     urlVerseObj.query.key = apiKey

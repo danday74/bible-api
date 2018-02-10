@@ -20,7 +20,7 @@ class BibleApi {
   }
 
   getVersions() {
-    return config.humanReadableVersions
+    return config.publicVersions
   }
 
   setApiKey(apiKey) {

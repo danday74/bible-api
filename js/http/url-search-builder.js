@@ -7,10 +7,9 @@ const config = require('../../config')
 
 const urlSearchBuilder = (apiKey, versions, q) => {
 
-  return _.map(versions, v => {
+  return _.map(versions, version => {
 
-    const version = _.values(v)[0]
-    const damId = 'ENG' + version + 'O2'
+    const damId = 'ENG' + version.code + 'O2'
 
     const urlSearchObj = _.cloneDeep(config.urlSearchObj)
     urlSearchObj.query.key = apiKey
