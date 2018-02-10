@@ -4,7 +4,7 @@ const sinon = require('sinon')
 
 const config = require('../../config')
 const getVersions = require('./get-versions')
-const v = require('../../mock-versions')
+const v = require('../../versions-mock')
 
 describe('getVersions', () => {
 
