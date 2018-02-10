@@ -35,7 +35,7 @@ class BibleApi {
     versions = getVersions(versions, this.defaultVersions)
     const urls = urlVerseBuilder(this.apiKey, versions, reference)
     if (urls == null) throw errors.generic.reference(reference)
-    doVerseRequests(urls)
+    return doVerseRequests(urls)
   }
 
   search(query, versions) {
@@ -43,7 +43,7 @@ class BibleApi {
     this.checkApiKey()
     versions = getVersions(versions, this.defaultVersions)
     const urls = urlSearchBuilder(this.apiKey, versions, query)
-    doSearchRequests(urls)
+    return doSearchRequests(urls)
   }
 }
 

@@ -5,7 +5,7 @@ const publicVersions = _.map(versions, version => {
   return _.omit(version, ['code'])
 })
 
-const protocol = 'https'
+const protocol = 'http'
 const host = 'dbt.io'
 const query = {v: 2}
 

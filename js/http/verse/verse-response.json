@@ -1,0 +1,66 @@
+[
+  [
+    {
+      "book_name": "Genesis",
+      "book_id": "Gen",
+      "book_order": "1",
+      "chapter_id": "3",
+      "chapter_title": "Chapter 3",
+      "verse_id": "16",
+      "verse_text": "To the woman he said, “I will surely multiply your pain in childbearing; in pain you shall bring forth children. Your desire shall be for your husband, and he shall rule over you.” \n\t\t\t",
+      "paragraph_number": "3"
+    },
+    {
+      "book_name": "Genesis",
+      "book_id": "Gen",
+      "book_order": "1",
+      "chapter_id": "3",
+      "chapter_title": "Chapter 3",
+      "verse_id": "17",
+      "verse_text": "And to Adam he said, “Because you have listened to the voice of your wife and have eaten of the tree of which I commanded you, ‘You shall not eat of it,’ cursed is the ground because of you; in pain you shall eat of it all the days of your life; \n\t\t\t",
+      "paragraph_number": "3"
+    },
+    {
+      "book_name": "Genesis",
+      "book_id": "Gen",
+      "book_order": "1",
+      "chapter_id": "3",
+      "chapter_title": "Chapter 3",
+      "verse_id": "18",
+      "verse_text": "thorns and thistles it shall bring forth for you; and you shall eat the plants of the field. \n\t\t\t",
+      "paragraph_number": "3"
+    }
+  ],
+  [
+    {
+      "book_name": "Genesis",
+      "book_id": "Gen",
+      "book_order": "1",
+      "chapter_id": "3",
+      "chapter_title": "Chapter 3",
+      "verse_id": "16",
+      "verse_text": "To the woman he said, “I will greatly multiply your pain in childbirth. In pain you will bear children. Your desire will be for your husband, and he will rule over you.” \n\t\t\t",
+      "paragraph_number": "3"
+    },
+    {
+      "book_name": "Genesis",
+      "book_id": "Gen",
+      "book_order": "1",
+      "chapter_id": "3",
+      "chapter_title": "Chapter 3",
+      "verse_id": "17",
+      "verse_text": "To Adam he said, “Because you have listened to your wife’s voice, and ate from the tree, about which I commanded you, saying, ‘You shall not eat of it, ’ the ground is cursed for your sake. You will eat from it with much labor all the days of your life. \n\t\t\t",
+      "paragraph_number": "3"
+    },
+    {
+      "book_name": "Genesis",
+      "book_id": "Gen",
+      "book_order": "1",
+      "chapter_id": "3",
+      "chapter_title": "Chapter 3",
+      "verse_id": "18",
+      "verse_text": "It will yield thorns and thistles to you; and you will eat the herb of the field. \n\t\t\t",
+      "paragraph_number": "3"
+    }
+  ]
+]
