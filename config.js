@@ -11,7 +11,7 @@ const computerReadableVersions = _.reduce(versions, (acc, version) => {
   return acc
 }, {})
 
-const protocol = 'http'
+const protocol = 'https'
 const host = 'dbt.io'
 const query = {v: 2}
 

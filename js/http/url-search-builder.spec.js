@@ -2,7 +2,7 @@ const chai = require('chai')
 const expect = chai.expect
 const urlSearchBuilder = require('./url-search-builder')
 const apiKey = 'XXXXX'
-const ENDPOINT = `http://dbt.io/text/search?v=2&key=${apiKey}`
+const ENDPOINT = `https://dbt.io/text/search?v=2&key=${apiKey}`
 const versions = [{AAAA: 'AAA'}, {BBBB: 'BBB'}]
 
 describe('urlSearchBuilder', () => {
