@@ -3,7 +3,7 @@ const expect = chai.expect
 const urlVerseBuilder = require('./url-verse-builder')
 const apiKey = 'XXXXX'
 const ENDPOINT = `https://dbt.io/text/verse?v=2&key=${apiKey}`
-const v = require('../../versions-mock')
+const v = require('../../../versions-mock')
 const versions = [v[0], v[1]]
 
 describe('urlVerseBuilder', () => {

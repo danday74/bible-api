@@ -1,8 +1,9 @@
 const config = require('./config')
 const getVersions = require('./js/helpers/get-versions')
-const makeHttpRequests = require('./js/http/make-http-requests')
-const urlSearchBuilder = require('./js/http/url-search-builder')
-const urlVerseBuilder = require('./js/http/url-verse-builder')
+const doSearchRequests = require('./js/http/search/do-search-requests')
+const doVerseRequests = require('./js/http/verse/do-verse-requests')
+const urlSearchBuilder = require('./js/http/search/url-search-builder')
+const urlVerseBuilder = require('./js/http/verse/url-verse-builder')
 const errors = require('./errors')
 
 class BibleApi {
@@ -34,7 +35,7 @@ class BibleApi {
     versions = getVersions(versions, this.defaultVersions)
     const urls = urlVerseBuilder(this.apiKey, versions, reference)
     if (urls == null) throw errors.generic.reference(reference)
-    makeHttpRequests(urls)
+    doVerseRequests(urls)
   }
 
   search(query, versions) {
@@ -42,7 +43,7 @@ class BibleApi {
     this.checkApiKey()
     versions = getVersions(versions, this.defaultVersions)
     const urls = urlSearchBuilder(this.apiKey, versions, query)
-    makeHttpRequests(urls)
+    doSearchRequests(urls)
   }
 }
 

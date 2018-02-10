@@ -1,7 +1,7 @@
 const _ = require('lodash')
 const chapterAndVerse = require('chapter-and-verse')
 const url = require('url')
-const config = require('../../config')
+const config = require('../../../config')
 
 // example URLs
 // BOOK    http://dbt.io/text/verse?v=2&key=0d1bd6c2bff512d1e68a37bb224c8247&dam_id=ENGESVN2ET&book_id=John

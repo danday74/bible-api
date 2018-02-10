@@ -1,6 +1,6 @@
 const _ = require('lodash')
 const url = require('url')
-const config = require('../../config')
+const config = require('../../../config')
 
 // example URLs
 // SEARCH  http://dbt.io/text/search?v=2&key=0d1bd6c2bff512d1e68a37bb224c8247&dam_id=ENGESVO2&query=beautiful are the feet of those who preach
