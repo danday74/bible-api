@@ -4,7 +4,7 @@ const config = require('../../config')
 
 const tc = versions => {
   const valid = typeCheck('String | [String]', versions) || typeCheck('[Object]', versions)
-  if (!valid) throw TypeError('versions must be a string or string array')
+  if (!valid) throw TypeError('versions must be a string or string array - e.g. ["ESV", "KJV"]')
 }
 
 const supportedVersionsAsArray = () => {

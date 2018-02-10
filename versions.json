@@ -1,0 +1,92 @@
+[
+  {
+    "name": "English Standard Version",
+    "abbr": "ESV",
+    "code": "ESV",
+    "audio": true,
+    "audioVerseTimings": true,
+    "recommended": true,
+    "rating": 5,
+    "comment": "love it with audio verse timings"
+  },
+  {
+    "name": "World English Bible",
+    "abbr": "WEB",
+    "code": "WEB",
+    "audio": false,
+    "audioVerseTimings": false,
+    "recommended": true,
+    "rating": 4,
+    "comment": "love it"
+  },
+  {
+    "name": "World Messianic Bible",
+    "abbr": "WMB",
+    "code": "WM1",
+    "audio": false,
+    "audioVerseTimings": false,
+    "recommended": true,
+    "rating": 4,
+    "comment": "love it"
+  },
+  {
+    "name": "King James Version",
+    "abbr": "KJV",
+    "code": "KJV",
+    "audio": true,
+    "audioVerseTimings": false,
+    "recommended": true,
+    "rating": 4,
+    "comment": "ye olden language with audio"
+  },
+  {
+    "name": "New American Standard Bible",
+    "abbr": "NASB",
+    "code": "NAS",
+    "audio": false,
+    "audioVerseTimings": false,
+    "recommended": true,
+    "rating": 3,
+    "comment": "modern language"
+  },
+  {
+    "name": "American Standard Version",
+    "abbr": "ASV",
+    "code": "ASV",
+    "audio": false,
+    "audioVerseTimings": false,
+    "recommended": true,
+    "rating": 2,
+    "comment": "ye olden language"
+  },
+  {
+    "name": "Revised Version 1885",
+    "abbr": "RV1885",
+    "code": "REV",
+    "audio": false,
+    "audioVerseTimings": false,
+    "recommended": true,
+    "rating": 2,
+    "comment": "ye olden language"
+  },
+  {
+    "name": "Wycliffe Bible",
+    "abbr": "WYC",
+    "code": "WMV",
+    "audio": false,
+    "audioVerseTimings": false,
+    "recommended": false,
+    "rating": 1,
+    "comment": "ye olden language with brackets repeating verses"
+  },
+  {
+    "name": "English Version for the Deaf",
+    "abbr": "EVD",
+    "code": "EVD",
+    "audio": false,
+    "audioVerseTimings": false,
+    "recommended": false,
+    "rating": 1,
+    "comment": "easy to read but a loose translation with punctuation issues"
+  }
+]

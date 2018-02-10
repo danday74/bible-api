@@ -1,4 +1,6 @@
+const config = require('./config')
 const getVersions = require('./js/helpers/get-versions')
+const makeHttpRequests = require('./js/http/make-http-requests')
 const urlSearchBuilder = require('./js/http/url-search-builder')
 const urlVerseBuilder = require('./js/http/url-verse-builder')
 
@@ -11,14 +13,18 @@ class BibleApi {
   checkApiKey() {
     const message =
       `
-      An API key is required - Set you API key with bibleApi.setApiKey(YOUR_API_KEY)
+      An API key is required - Set you API key with bibleApi.setApiKey("YOUR_API_KEY")
       If you do not have an API key you can request one for free at www.digitalbibleplatform.com
       `
     if (this.apiKey == null) throw Error(message)
   }
 
+  getVersions() {
+    return config.humanReadableVersions
+  }
+
   setApiKey(apiKey) {
-    if (typeof apiKey !== 'string') throw TypeError('API key must be in string format')
+    if (typeof apiKey !== 'string') throw TypeError('API key must be a string')
     this.apiKey = apiKey.trim()
   }
 
@@ -27,22 +33,21 @@ class BibleApi {
   }
 
   getReference(reference, versions) {
-    if (typeof reference !== 'string') throw TypeError('reference must be a string - e.g. John 3:16')
+    if (typeof reference !== 'string') throw TypeError('reference must be a string - e.g. "John 3:16"')
     this.checkApiKey()
     versions = getVersions(versions, this.defaultVersions)
     const urls = urlVerseBuilder(this.apiKey, versions, reference)
-    // if (urls == null) return null // needs to consider promise return format
-    console.log(urls)
+    makeHttpRequests(urls)
+    // if (urls == null) return null // need to consider promise return format
   }
 
   search(query, versions) {
-    if (typeof query !== 'string') throw TypeError('query must be a string - e.g. beautiful are the feet of those who preach')
+    if (typeof query !== 'string') throw TypeError('query must be a string - e.g. "beautiful are the feet of those who preach"')
     this.checkApiKey()
     versions = getVersions(versions, this.defaultVersions)
     const urls = urlSearchBuilder(this.apiKey, versions, query)
-    console.log(urls)
+    makeHttpRequests(urls)
   }
-
 }
 
 module.exports = new BibleApi()
