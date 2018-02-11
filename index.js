@@ -10,6 +10,7 @@ class BibleApi {
 
   constructor() {
     this.defaultVersions = getVersions()
+    this.resultsPerPage = 50
   }
 
   checkApiKey() {
@@ -29,6 +30,11 @@ class BibleApi {
     this.defaultVersions = getVersions(versions, this.defaultVersions)
   }
 
+  setNumberOfSearchResultsPerPage(resultsPerPage) {
+    if (!Number.isInteger(resultsPerPage) || resultsPerPage < 1) throw errors.type.resultsPerPage()
+    this.resultsPerPage = resultsPerPage
+  }
+
   getReference(reference, versions) {
     if (typeof reference !== 'string') throw errors.type.reference()
     this.checkApiKey()
@@ -38,12 +44,13 @@ class BibleApi {
     return doVerseRequests(urls, versions, reference)
   }
 
-  search(query, versions) {
+  search(query, versions, offset = 0) {
     if (typeof query !== 'string') throw errors.type.query()
+    if (!Number.isInteger(offset) || offset < 0) throw errors.type.offset()
     this.checkApiKey()
     versions = getVersions(versions, this.defaultVersions)
-    const urls = urlSearchBuilder(this.apiKey, versions, query)
-    return doSearchRequests(urls)
+    const urls = urlSearchBuilder(this.apiKey, versions, query, offset, this.resultsPerPage)
+    return doSearchRequests(urls, versions)
   }
 }
 

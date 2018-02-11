@@ -8,8 +8,10 @@ If you do not have an API key you can request one for free at www.digitalbiblepl
 const errors = {
   type: {
     apiKey: () => TypeError(PREFIX + ' apiKey must be a string'),
+    offset: () => TypeError(PREFIX + ' offset must be 0 or a positive integer'),
+    query: () => TypeError(PREFIX + ' query must be a string - e.g. "beautiful are the feet of those who preach"'),
     reference: () => TypeError(PREFIX + ' reference must be a string - e.g. "John 3:16"'),
-    query: () => TypeError(PREFIX + ' query must be a string - e.g. "beautiful are the feet of those who preach"')
+    resultsPerPage: () => TypeError(PREFIX + ' resultsPerPage must be a positive integer')
   },
   generic: {
     apiKey: () => Error(genericApiKeyMessage),

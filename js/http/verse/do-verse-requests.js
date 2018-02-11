@@ -1,6 +1,6 @@
 const axios = require('axios')
-const _ = require('lodash')
 const chapterAndVerse = require('chapter-and-verse')
+const getPrettyVerse = require('../common/get-pretty-verse')
 
 const doVerseRequests = (urls, versions, ref) => {
 
@@ -11,15 +11,27 @@ const doVerseRequests = (urls, versions, ref) => {
     responses = responses.map(res => res.data)
     return responses.map((res, i) => {
 
-      const version = _.pick(versions[i], ['name', 'abbr'])
-      const meta = _.assign({}, {versionName: version.name, versionAbbr: version.abbr}, cvso, {verseCount: res.length})
-      const verses = res.map(verse => ({
-        bookId: verse.book_id,
-        bookName: verse.book_name,
-        chapter: parseInt(verse.chapter_id),
-        verse: parseInt(verse.verse_id),
-        text: verse.verse_text.replace(/ \n\t\t\t$/, '').trim()
-      }))
+      // meta
+      const version = versions[i]
+      const meta = {
+        type: cvso.type,
+        url: urls[i].replace(/&key=[^&]*&/, '&key=XXXXX_YOUR_API_KEY_XXXXX&'),
+        versionName: version.name,
+        versionAbbr: version.abbr,
+        asString: cvso.asString,
+        asShortString: cvso.asShortString,
+        bookId: cvso.bookId,
+        bookName: cvso.bookName,
+        testament: cvso.testament,
+        chapter: cvso.chapter,
+        from: cvso.from,
+        to: cvso.to,
+        range: cvso.range,
+        verseCount: res.length
+      }
+
+      // verses
+      const verses = res.map(verse => getPrettyVerse(verse))
 
       return {
         meta,
