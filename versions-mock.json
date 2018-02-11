@@ -1,21 +1,26 @@
 [
   {
+    "name": "Mock Version A",
     "abbr": "AAA",
     "code": "XAX"
   },
   {
+    "name": "Mock Version B",
     "abbr": "BBB",
     "code": "XBX"
   },
   {
+    "name": "Mock Version C",
     "abbr": "CCC",
     "code": "XCX"
   },
   {
+    "name": "Mock Version D",
     "abbr": "DDDD",
     "code": "XDX"
   },
   {
+    "name": "Mock Version E",
     "abbr": "EEE",
     "code": "XEX"
   }

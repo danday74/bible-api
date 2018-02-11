@@ -1,0 +1,60 @@
+[
+  {
+    "meta": {
+      "type": "search",
+      "url": "http://dbt.io/text/search?v=2&key=XXXXX_YOUR_API_KEY_XXXXX&dam_id=ENGNASO2&query=thank%20you&offset=0&limit=2&echo=true",
+      "versionName": "Mock Version A",
+      "versionAbbr": "AAA",
+      "query": "thank you",
+      "totalResults": 4,
+      "offset": 0,
+      "resultsPerPage": 2,
+      "verseCount": 2
+    },
+    "verses": [
+      {
+        "bookId": "1Chr",
+        "bookName": "1 Chronicles",
+        "chapter": 29,
+        "verse": 13,
+        "text": "``Now therefore, our God, we thank You, and praise Your glorious name."
+      },
+      {
+        "bookId": "Isa",
+        "bookName": "Isaiah",
+        "chapter": 38,
+        "verse": 18,
+        "text": "``For Sheol cannot thank You, Death cannot praise You; Those who go down to the pit cannot hope for Your faithfulness."
+      }
+    ]
+  },
+  {
+    "meta": {
+      "type": "search",
+      "url": "http://dbt.io/text/search?v=2&key=XXXXX_YOUR_API_KEY_XXXXX&dam_id=ENGESVO2&query=thank%20you&offset=0&limit=2&echo=true",
+      "versionName": "Mock Version B",
+      "versionAbbr": "BBB",
+      "query": "thank you",
+      "totalResults": 9,
+      "offset": 0,
+      "resultsPerPage": 2,
+      "verseCount": 2
+    },
+    "verses": [
+      {
+        "bookId": "1Chr",
+        "bookName": "1 Chronicles",
+        "chapter": 29,
+        "verse": 13,
+        "text": "And now we thank you, our God, and praise your glorious name."
+      },
+      {
+        "bookId": "Ps",
+        "bookName": "Psalm",
+        "chapter": 35,
+        "verse": 18,
+        "text": "I will thank you in the great congregation; in the mighty throng I will praise you."
+      }
+    ]
+  }
+]

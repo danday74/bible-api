@@ -1,0 +1,40 @@
+[
+  {
+    "controller": "text",
+    "resource": "search",
+    "v": "2",
+    "key": "0d1bd6c2bff512d1e68a37bb224c8247",
+    "dam_id": "ENGESVO2",
+    "query": "thank you",
+    "offset": "0",
+    "limit": "2",
+    "echo": "true"
+  },
+  [
+    [
+      {
+        "total_results": "9"
+      }
+    ],
+    [
+      {
+        "dam_id": "ENGESVO2ET",
+        "book_name": "1 Chronicles",
+        "book_id": "1Chr",
+        "chapter_id": "29",
+        "verse_id": "13",
+        "verse_text": "And now we thank you, our God, and praise your glorious name. \n\t\t\t",
+        "book_order": "13"
+      },
+      {
+        "dam_id": "ENGESVO2ET",
+        "book_name": "Psalm",
+        "book_id": "Ps",
+        "chapter_id": "35",
+        "verse_id": "18",
+        "verse_text": "I will thank you in the great congregation; in the mighty throng I will praise you. \n\t\t\t",
+        "book_order": "19"
+      }
+    ]
+  ]
+]

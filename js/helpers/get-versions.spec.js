@@ -6,6 +6,13 @@ const config = require('../../config')
 const getVersions = require('./get-versions')
 const v = require('../../versions-mock')
 
+const STR_NOT_A_VERSION = 'DDD'
+const OBJ_NOT_A_VERSION = {
+  name: 'Mock Version D',
+  abbr: 'DDD',
+  code: 'XDX'
+}
+
 describe('getVersions', () => {
 
   let sandbox, versions
@@ -54,18 +61,18 @@ describe('getVersions', () => {
   })
 
   it('filters out unsupported versions from versions and preserves order', () => {
-    versions = getVersions(['BBB', 'DDD', 'AAA']) // string array
+    versions = getVersions(['BBB', STR_NOT_A_VERSION, 'AAA']) // string array
     expect(versions).to.eql([v[1], v[0]])
 
-    versions = getVersions([v[1], {abbr: 'DDDD', code: 'XD'}, v[0]]) // object array
+    versions = getVersions([v[1], OBJ_NOT_A_VERSION, v[0]]) // object array
     expect(versions).to.eql([v[1], v[0]])
   })
 
   it('filters out unsupported versions from default versions and preserves order', () => {
-    versions = getVersions([], ['DDDD', 'QQQ', 'AAA']) // string array
+    versions = getVersions([], ['DDDD', STR_NOT_A_VERSION, 'AAA']) // string array
     expect(versions).to.eql([v[3], v[0]])
 
-    versions = getVersions([], [v[3], {abbr: 'QQQ', code: 'XQX'}, v[0]]) // object array
+    versions = getVersions([], [v[3], OBJ_NOT_A_VERSION, v[0]]) // object array
     expect(versions).to.eql([v[3], v[0]])
   })
 
