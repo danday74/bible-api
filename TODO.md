@@ -1,3 +1,7 @@
+PROBLEM WITH INVALID VERSES
+
+
+
 example json output files for bible-api - make sure that search and verse provide a similar response format
 
 option to toggle on real api keys in URLs

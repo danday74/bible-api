@@ -1,0 +1,22 @@
+[
+  {
+    "book_name": "Genesis",
+    "book_id": "Gen",
+    "book_order": "1",
+    "chapter_id": "7",
+    "chapter_title": "Chapter 7",
+    "verse_id": "23",
+    "verse_text": "Thus He blotted out every living thing that was upon the face of the land, from man to animals to creeping things and to birds of the sky, and they were blotted out from the earth; and only Noah was left, together with those that were with him in the ark. \n\t\t\t",
+    "paragraph_number": "7"
+  },
+  {
+    "book_name": "Genesis",
+    "book_id": "Gen",
+    "book_order": "1",
+    "chapter_id": "7",
+    "chapter_title": "Chapter 7",
+    "verse_id": "24",
+    "verse_text": "The water prevailed upon the earth one hundred and fifty days. \n\t\t\n\t\t",
+    "paragraph_number": "7"
+  }
+]

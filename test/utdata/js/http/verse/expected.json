@@ -1,0 +1,70 @@
+[
+  {
+    "meta": {
+      "type": "verses",
+      "url": "http://dbt.io/text/verse?v=2&key=XXXXX_YOUR_API_KEY_XXXXX&dam_id=ENGNASO2ET&book_id=Gen&chapter_id=7&verse_start=23&verse_end=30",
+      "versionName": "Mock Version A",
+      "versionAbbr": "AAA",
+      "asString": "Genesis 7:23-30",
+      "asShortString": "Genesis 7:23-30",
+      "bookId": "Gen",
+      "bookName": "Genesis",
+      "testament": "O",
+      "chapter": 7,
+      "from": 23,
+      "to": 30,
+      "range": [23, 24, 25, 26, 27, 28, 29, 30],
+      "verseCount": 2
+    },
+    "verses": [
+      {
+        "bookId": "Gen",
+        "bookName": "Genesis",
+        "chapter": 7,
+        "verse": 23,
+        "text": "Thus He blotted out every living thing that was upon the face of the land, from man to animals to creeping things and to birds of the sky, and they were blotted out from the earth; and only Noah was left, together with those that were with him in the ark."
+      },
+      {
+        "bookId": "Gen",
+        "bookName": "Genesis",
+        "chapter": 7,
+        "verse": 24,
+        "text": "The water prevailed upon the earth one hundred and fifty days."
+      }
+    ]
+  },
+  {
+    "meta": {
+      "type": "verses",
+      "url": "http://dbt.io/text/verse?v=2&key=XXXXX_YOUR_API_KEY_XXXXX&dam_id=ENGESVO2ET&book_id=Gen&chapter_id=7&verse_start=23&verse_end=30",
+      "versionName": "Mock Version B",
+      "versionAbbr": "BBB",
+      "asString": "Genesis 7:23-30",
+      "asShortString": "Genesis 7:23-30",
+      "bookId": "Gen",
+      "bookName": "Genesis",
+      "testament": "O",
+      "chapter": 7,
+      "from": 23,
+      "to": 30,
+      "range": [23, 24, 25, 26, 27, 28, 29, 30],
+      "verseCount": 2
+    },
+    "verses": [
+      {
+        "bookId": "Gen",
+        "bookName": "Genesis",
+        "chapter": 7,
+        "verse": 23,
+        "text": "He blotted out every living thing that was on the face of the ground, man and animals and creeping things and birds of the heavens. They were blotted out from the earth. Only Noah was left, and those who were with him in the ark."
+      },
+      {
+        "bookId": "Gen",
+        "bookName": "Genesis",
+        "chapter": 7,
+        "verse": 24,
+        "text": "And the waters prevailed on the earth 150 days."
+      }
+    ]
+  }
+]
