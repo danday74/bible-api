@@ -20,3 +20,18 @@ then ... http://cloud.faithcomesbyhearing.com/mp3audiobibles2/ + PATH ... e.g. h
 verse timings ...
 
 https://dbt.io/audio/versestart?key=0d1bd6c2bff512d1e68a37bb224c8247&dam_id=ENGESVN2DA&osis_code=John&chapter_number=5&verse_number=3&v=2
+
+
+
+FROM chapter-and-verse
+----------------------
+
+* Need to consider empty array when coding - Add this to README of other projects TODO
+
+3 John 1:15
+KJV - empty array
+ESV - Peace be to you. The friends greet you. Greet the friends, every one of them.
+
+Matthew 12:47
+KJV - Then one said unto him, Behold, thy mother and thy brethren stand without, desiring to speak with thee.
+ESV - empty array
