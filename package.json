@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "axios": "^0.17.1",
-    "chapter-and-verse": "^2.0.0",
+    "chapter-and-verse": "^2.0.2",
     "lodash": "^4.17.5",
     "type-check": "^0.3.2",
     "url": "^0.11.0"
