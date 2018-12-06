@@ -14,4 +14,6 @@
 
 ## Introduction
 
-TODO .. Development in progress, docs coming real soon
+TODO .. Development in progress, this may take some time!
+
+
