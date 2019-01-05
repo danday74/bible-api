@@ -46,7 +46,7 @@ describe('urlVerseBuilder', () => {
     expect(true).to.be.true
   })
 
-  it('invalid', () => {
+  xit('invalid', () => {
     urls = urlVerseBuilder(apiKey, versions, 'gn 51')
     expect(urls).to.be.null
   })

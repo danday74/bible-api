@@ -12,7 +12,7 @@ const URLS = [
 
 describe('doVerseRequests', () => {
 
-  it('verses', done => {
+  xit('verses', done => {
 
     const response1 = require(UTDATA + '/do-verse-requests-nas')
     const nocker1 = nock('http://dbt.io')
